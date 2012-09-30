@@ -7,7 +7,7 @@
 <project basedir="." default="build" name="JUnitTest">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../eclipse"/>
-    <property name="junit.output.dir" value="junit"/>
+    <property name="junit.output.dir" value=""/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.6"/>
     <property name="source" value="1.6"/>
