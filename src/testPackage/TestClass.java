@@ -1,5 +1,7 @@
-package jUnitPackage;
+package testPackage;
 import static org.junit.Assert.assertTrue;
+import jUnitPackage.Subject;
+
 import org.junit.Test;
 
 import org.junit.BeforeClass;
