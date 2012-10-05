@@ -16,7 +16,7 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
     </path>
     <path id="JUnitTest.classpath">
-        <pathelement location="bin"/>
+        <pathelement location="bin/testPackage"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
     <target name="init">
