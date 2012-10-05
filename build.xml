@@ -61,7 +61,7 @@
 	      	<!--  classpath refid="JUnitTest.classpath" />-->
 	      	<classpath location="/var/lib/jenkins/jobs/JUnit test/workspace/bin/" />
 	      	<batchtest fork="no" todir="${junit.output.dir}" >
-	        	<fileset dir="/var/lib/jenkins/jobs/JUnit test/workspace/bin/" includes="**/TestClass.class" />
+	        	<fileset dir="/var/lib/jenkins/jobs/JUnit test/workspace/bin/" includes="**/Test*.class" />
 	      	</batchtest>
 	    </junit>
 	    <echo>runtests complete!</echo>
