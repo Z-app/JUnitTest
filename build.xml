@@ -57,11 +57,11 @@
     </target>
     <target name="Test" depends="build">
         <mkdir dir="${junit.output.dir}"/>
-	    <junit fork="yes" printsummary="withOutAndErr">
+	    <junit fork="Yes" printsummary="withOutAndErr">
 	        <formatter type="xml"/>
 	      	<!--  classpath refid="JUnitTest.classpath" />-->
 	      	<classpath location="/var/lib/jenkins/jobs/JUnit test/workspace/bin/" />
-	      	<batchtest fork="no" todir="${junit.output.dir}" >
+	      	<batchtest fork="no" todir="${junit.output.dir}" haltonerror="no">
 	        	<fileset dir="/var/lib/jenkins/jobs/JUnit test/workspace/bin/" includes="**/Test*.class" />
 	      	</batchtest>
 	    </junit>
