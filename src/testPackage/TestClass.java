@@ -1,4 +1,5 @@
 package testPackage;
+import jUnitPackage.*;
 import static org.junit.Assert.assertTrue;
 import jUnitPackage.Subject;
 
