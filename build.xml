@@ -56,7 +56,7 @@
     </target>
     <target name="Test" depends="build">
 	    <junit fork="yes" printsummary="withOutAndErr">
-	      <classpath refid="JUnitTest" />
+	      <classpath refid="JUnitTest.classpath" />
 	      <batchtest fork="yes">
 	        <fileset dir="bin/testPackage" includes="Test*.class" />
 	      </batchtest>
