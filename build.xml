@@ -55,13 +55,15 @@
         <antcall target="build"/>
     </target>
     <target name="Test" depends="build">
-	    <junit fork="yes" printsummary="withOutAndErr">
-	      <classpath refid="JUnitTest.classpath" />
-	      <batchtest fork="yes">
-	        <fileset dir="bin/testPackage" includes="Test*.class" />
-	      </batchtest>
+        <mkdir dir="${junit.output.dir}"/>
+	    <junit fork="yes" printsummary="withOutAndErr" todir="${junit.output.dir}">
+	        <formatter type="xml"/>
+	      	<classpath refid="JUnitTest.classpath" />
+	      	<batchtest fork="yes">
+	        	<fileset dir="bin/testPackage" includes="Test*.class" />
+	      	</batchtest>
 	    </junit>
-	     <echo>runtests complete!</echo>
+	    <echo>runtests complete!</echo>
   	</target>
     
     <target name="junitreport">
