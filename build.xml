@@ -23,7 +23,7 @@
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*/*.java"/>
+                <exclude name="**/*.java"/>
             </fileset>
         </copy>
     </target>
@@ -58,7 +58,7 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="jUnitPackage.Main" todir="${junit.output.dir}"/>
+            <test name="testPackage.TestClass" todir="${junit.output.dir}"/>
             <classpath refid="JUnitTest.classpath"/>
         </junit>
     </target>
