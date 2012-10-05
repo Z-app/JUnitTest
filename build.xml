@@ -54,14 +54,16 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="Test">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="testPackage.*.class" todir="${junit.output.dir}"/>
-            <classpath refid="JUnitTest.classpath"/>
-        </junit>
-    </target>
+    <target name="Test" depends="build">
+	    <junit fork="yes" printsummary="withOutAndErr">
+	      <classpath refid="JUnitTest" />
+	      <batchtest fork="yes">
+	        <fileset dir="bin/testPackage" includes="Test*.class" />
+	      </batchtest>
+	    </junit>
+	     <echo>runtests complete!</echo>
+  	</target>
+    
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
