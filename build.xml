@@ -16,14 +16,14 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
     </path>
     <path id="JUnitTest.classpath">
-        <pathelement location="bin/testPackage"/>
+        <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*.java"/>
+                <exclude name="**/*/*.java"/>
             </fileset>
         </copy>
     </target>
