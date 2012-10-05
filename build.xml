@@ -56,11 +56,11 @@
     </target>
     <target name="Test" depends="build">
         <mkdir dir="${junit.output.dir}"/>
-	    <junit fork="yes" printsummary="withOutAndErr" printsummary="yes">
+	    <junit fork="yes" printsummary="withOutAndErr">
 	        <formatter type="xml"/>
 	      	<classpath refid="JUnitTest.classpath" />
 	      	<batchtest fork="yes" todir="${junit.output.dir}" >
-	        	<fileset dir="bin/testPackage" includes="Test*.class" />
+	        	<fileset dir="testPackage" includes="Test*.class" />
 	      	</batchtest>
 	    </junit>
 	    <echo>runtests complete!</echo>
