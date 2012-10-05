@@ -60,7 +60,7 @@
 	        <formatter type="xml"/>
 	      	<classpath refid="JUnitTest.classpath" />
 	      	<batchtest fork="no" todir="${junit.output.dir}" >
-	        	<fileset dir="bin/testPackage" includes="Test*.class" />
+	        	<fileset dir="bin/testPackage" includes="**/Test*.class" />
 	      	</batchtest>
 	    </junit>
 	    <echo>runtests complete!</echo>
