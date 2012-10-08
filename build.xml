@@ -14,7 +14,7 @@
     <path id="JUnit 4.libraryclasspath">
         <pathelement location="/usr/share/java/junit4.jar"/>
         <pathelement location="/usr/share/java/ant-junit4.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+        <!--pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/-->
     </path>
     <path id="JUnitTest.classpath">
         <pathelement location="bin"/>
