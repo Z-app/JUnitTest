@@ -58,6 +58,10 @@
     <target name="Test" depends="build">
         <mkdir dir="${junit.output.dir}"/>
 	    <junit fork="Yes" printsummary="withOutAndErr">
+	        <classpath>
+	        	<!-- The location of the JUnit version that you want to use -->
+	        	<pathelement location="/usr/share/java/junit4.jar"/>
+	    	</classpath>
 	        <formatter type="xml"/>
 	      	<!--  classpath refid="JUnitTest.classpath" />-->
 	      	<classpath location="/var/lib/jenkins/jobs/JUnit test/workspace/bin/" />
