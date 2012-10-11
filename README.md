@@ -1,4 +1,0 @@
-JUnitTest
-=========
-
-For the testers
